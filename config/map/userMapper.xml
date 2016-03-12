@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shuai.mapper.UserMapper">
+	<select id="checkUserIsExits" parameterType="java.lang.String" resultType="int">
+		select count(*) from users where mPhoneNum=#{mPhoneNum}
+	</select>
+	<select id="login" parameterType="com.shuaizhao.domain.User" resultType="int">
+		select count(*) from users where mPhoneNum=#{mPhoneNum} and mPassword=#{mPassword}
+	</select>
+	<select id="findUserByPhoneNum" parameterType="java.lang.String" resultType="com.shuaizhao.domain.User">
+		select * from users where mPhoneNum=#{mPhoneNum}
+	</select>
+	
+	<select id="findUserDetailInfoByPhoneNum" parameterType="java.lang.String" resultType="com.shuaizhao.domain.UserDetailInfo">
+		select * from users where mPhoneNum=#{mPhoneNum}
+	</select>
+	
+	<select id="findHeadURLByPhoneNum" parameterType="java.lang.String" resultType="java.lang.String">
+		select mHeadURL from users where mPhoneNum=#{mPhoneNum}
+	</select>
+	
+	<insert id="insertUser" parameterType="com.shuaizhao.domain.User">
+		insert into users(mUserName,mPassword,mPhoneNum) values(#{mUserName},#{mPassword},#{mPhoneNum})
+	</insert>
+	<update id="updateUser" parameterType="com.shuaizhao.domain.User">
+		update users set mUserName=#{mUserName},mPassword=#{mPassword},mPhoneNum=#{mPhoneNum},mNickName=#{mNickName} where mPhoneNum=#{mPhoneNum}
+	</update>
+	<update id="updatePassword" parameterType="com.shuaizhao.domain.User">
+		update users set mPassword=#{mPassword} where mPhoneNum=#{mPhoneNum}
+	</update>
+	
+	<update id="updateHeadURL" parameterType="com.shuaizhao.domain.UserDetailInfo">
+		update users set mHeadURL=#{mHeadURL} where mPhoneNum=#{mPhoneNum}
+	</update>
+	
+	<update id="saveUserInfo" parameterType="com.shuaizhao.domain.UserDetailInfo">
+		update users set mUserName=#{mUserName},mSex=#{mSex},mSignature=#{mSignature} where mPhoneNum=#{mPhoneNum}
+	</update>
+	<delete id="deleteUser" parameterType="String">
+		delete from users where mPhoneNum=#{mPhoneNum}
+	</delete>
+</mapper>

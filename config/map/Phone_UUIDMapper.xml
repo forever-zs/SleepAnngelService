@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shuai.mapper.Phone_UUIDMapper">
+	<select id="checkUUIDExist" parameterType="java.lang.String" resultType="int">
+		select count(*) from Phone_UUID where mUUID=#{mUUID}
+	</select>
+	<select id="findPhoneNumByUUID" parameterType="java.lang.String" resultType="com.shuaizhao.domain.Phone_UUID">
+		select * from Phone_UUID where mUUID=#{mUUID}
+	</select>
+	<insert id="insertUUID" parameterType="com.shuaizhao.domain.Phone_UUID">
+		insert into Phone_UUID(mPhoneNum,mUUID) values(#{mPhoneNum},#{mUUID})
+	</insert>
+	<update id="updateUUID" parameterType="com.shuaizhao.domain.Phone_UUID">
+		update Phone_UUID set mUUID=#{mUUID},mPhoneNum=#{mPhoneNum} where mPhoneNum=#{mPhoneNum}
+	</update>
+	<delete id="deleteUUID" parameterType="com.shuaizhao.domain.Phone_UUID">
+		delete from Phone_UUID where mPhoneNum=#{mPhoneNum}
+	</delete>
+</mapper>

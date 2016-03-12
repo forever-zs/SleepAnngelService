@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shuai.mapper.TipMapper">
+	<select id="findTipById" parameterType="int" resultType="com.shuaizhao.domain.Tip">
+		select * from tips where id=#{id}
+	</select>
+	<insert id="insertTip" parameterType="com.shuaizhao.domain.Tip">
+		insert into tips(mMessage,mAuthor) values(#{mMessage},#{mAuthor})
+	</insert>
+</mapper>

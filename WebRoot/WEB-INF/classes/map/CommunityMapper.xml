@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shuai.mapper.CommunityMapper">
+	<insert id="insertImage" parameterType="com.shuaizhao.domain.Community">
+		insert into community(mHeadURL,mImageURL,mPhoneNum) values(#{mHeadURL},#{mImageURL},#{mPhoneNum})
+	</insert>
+	
+	
+	<insert id="insertContent" parameterType="com.shuaizhao.domain.Community">
+		insert into community(mTime,mName,mPhoneNum,mContent) values(#{mTime},#{mName},#{mPhoneNum},#{mContent})
+	</insert>
+	
+	<insert id="insertCommunity" parameterType="com.shuaizhao.domain.Community">
+		insert into community(mTime,mName,mPhoneNum,mContent,mHeadURL,mImageURL) values(#{mTime},#{mName},#{mPhoneNum},#{mContent},#{mHeadURL},#{mImageURL})
+	</insert>
+	
+	<update id="updateImage" parameterType="com.shuaizhao.domain.Community">
+		update community set mHeadURL=#{mHeadURL},mImageURL=#{mImageURL} where mPhoneNum=#{mPhoneNum}
+	</update>
+	
+	<update id="updateContent" parameterType="com.shuaizhao.domain.Community">
+		update community set mTime=#{mTime},mName=#{mName},mContent=#{mContent} where mPhoneNum=#{mPhoneNum}
+	</update>
+	
+	<select id="isInsertedContent" parameterType="java.lang.String" resultType="java.lang.String">
+		select mContent from community where mPhoneNum=#{mPhoneNum}
+	</select>
+	
+	
+	<select id="isInsertedImage" parameterType="java.lang.String" resultType="java.lang.String">
+		select mImageURL from community where mPhoneNum=#{mPhoneNum}
+	</select>
+	
+	<select id="findCommunityByTime" parameterType="java.lang.String" resultType="com.shuaizhao.domain.Community"> 
+	    select * from community where unix_timestamp(mTime) &lt;unix_timestamp(#{time}) order by mTime desc limit 10
+	</select>
+	
+	
+	
+</mapper>

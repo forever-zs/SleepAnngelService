@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shuai.mapper.SignTimeMapper">
+	<select id="findSignTimeByNum" parameterType="java.lang.String" resultType="com.shuaizhao.domain.SignTime">
+		select * from sign_time where mPhoneNum=#{mPhoneNum}
+	</select>
+	<insert id="insertSignTime" parameterType="com.shuaizhao.domain.SignTime">
+		insert into sign_time(sign_count,sign_time,mPhoneNum) values(#{sign_count},#{sign_time},#{mPhoneNum})
+	</insert>
+	<update id="updateSignTime" parameterType="com.shuaizhao.domain.SignTime">
+		update sign_time set sign_count=#{sign_count},sign_time=#{sign_time} where mPhoneNum=#{mPhoneNum}
+	</update>
+</mapper>

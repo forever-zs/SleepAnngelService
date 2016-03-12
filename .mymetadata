@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="SleepAngel"
+  id="myeclipse.1456231397097"
+  context-root="/SleepAngel"
+  j2ee-spec="5.0"
+  archive="SleepAngel.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

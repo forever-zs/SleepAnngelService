@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Registe</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.Registe</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckTelphone</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.CheckTelphone</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.Login</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserCenterDetail</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.UserCenterDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SignUp</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.SignUp</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisteForWeb</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.RegisteForWeb</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>VersionUpdate</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.VersionUpdate</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateUserInfo</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.UpdateUserInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadHeadPicture</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.UploadHeadPicture</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetUserInfo</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.GetUserInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckPasswordValued</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.CheckPasswordValued</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdatePassword</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.UpdatePassword</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetMusic</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.GetMusic</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Test</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.Test</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadCommunityContent</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.UploadCommunityContent</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadCommunity</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.UploadCommunity</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetCommunityList</servlet-name>
+    <servlet-class>com.shuaizhao.web.controller.GetCommunityList</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>Registe</servlet-name>
+    <url-pattern>/Registe</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckTelphone</servlet-name>
+    <url-pattern>/CheckTelphone</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserCenterDetail</servlet-name>
+    <url-pattern>/UserCenterDetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SignUp</servlet-name>
+    <url-pattern>/SignUp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisteForWeb</servlet-name>
+    <url-pattern>/RegisteForWeb</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>VersionUpdate</servlet-name>
+    <url-pattern>/VersionUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateUserInfo</servlet-name>
+    <url-pattern>/UpdateUserInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadHeadPicture</servlet-name>
+    <url-pattern>/UploadHeadPicture</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetUserInfo</servlet-name>
+    <url-pattern>/GetUserInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckPasswordValued</servlet-name>
+    <url-pattern>/CheckPasswordValued</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdatePassword</servlet-name>
+    <url-pattern>/UpdatePassword</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetMusic</servlet-name>
+    <url-pattern>/GetMusic</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Test</servlet-name>
+    <url-pattern>/Test</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadCommunityContent</servlet-name>
+    <url-pattern>/UploadCommunityContent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadCommunity</servlet-name>
+    <url-pattern>/UploadCommunity</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetCommunityList</servlet-name>
+    <url-pattern>/GetCommunityList</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
